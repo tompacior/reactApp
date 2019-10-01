@@ -1,8 +1,16 @@
 import React from 'react';
 
-const Form = () => {
+const Form = (props) => {
     return (
-        <div>Form powinno działać</div>
+        <form onSubmit={props.submit}>
+            <input
+                type="text"
+                value={props.value}
+                onChange={props.change}>
+            </input>
+
+            <button>Wyszukaj miasto</button>
+        </form>
     );
-}
+};
 export default Form;
